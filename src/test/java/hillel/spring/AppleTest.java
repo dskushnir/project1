@@ -4,6 +4,9 @@ import org.junit.Test;
 import lombok.val;
 import org.assertj.core.api.Assertions;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 public class AppleTest {
@@ -16,4 +19,5 @@ public class AppleTest {
                Assertions. assertThat(apple).isEqualTo(new Apple(100, "Green"));
 
         }
+
 }
