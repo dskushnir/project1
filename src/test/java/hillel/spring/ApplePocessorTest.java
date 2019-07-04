@@ -6,6 +6,8 @@ import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
 import lombok.val;
+import org.assertj.core.api.Assertions;
+import org.assertj.core.internal.Maps;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.*;
@@ -54,7 +56,7 @@ public class ApplePocessorTest {
 
         Predicate predicate = new Predicate<Apple>() {
             @Override
-            public boolean test(Apple apple) {
+            public boolean test(Apple apple)  {
                 return apple.getColor().equals("Red");
             }
         };
@@ -122,9 +124,12 @@ public class ApplePocessorTest {
     @Test
     public void groupByColor() throws Exception {
         Map<String, List<Apple>> colorToApples = apples.stream()
-                .collect(Collectors.groupingBy(Apple::getColor));}
+                .collect(Collectors.groupingBy(Apple::getColor));
 
 
+
+
+    }
 
     @Test
     public void statistics() throws Exception {
