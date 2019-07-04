@@ -2,7 +2,7 @@ package lesson2;
 import lombok.Data;
 @Data
 
-public class Dish implements Comparable<Dish>{
+public class Dish {
     private final String name;
     private final Integer calories;
     private final Boolean isBio;
@@ -14,22 +14,14 @@ public class Dish implements Comparable<Dish>{
         this.isBio = isBio;
         this.type = type;
     }
-
-    @Override
-    public int compareTo(Dish o) {
-        return calories.compareTo(o.getCalories());
-    }
 }
-
-
     enum DishType {
 
         BEEF,
 
         CHICKEN,
 
-        VEGETABLES;
-
+        VEGETABLES
 
     }
 
